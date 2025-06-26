@@ -77,23 +77,34 @@ G = Goal
 
 ### 2. Running an Algorithm
 ```python
-from pathfinder import Pathfinder
+import numpy as np
+from PathWise import BFS, DFS, UCS, A_Star
 
-solver = Pathfinder(maze)
-path, visited = solver.bfs()  # or dfs(), ucs(), astar()
+Maze = [[...], [...], ...]
+Maze = np.array(Maze).astype('str')
+
+path, nodesExpanded = DFS(Maze, start, end)         #   or BFS
+path, cost, nodesExpanded = UCS(Maze, start, end)   #   or A_Star
 
 print("Path:", path)
 print("Visited:", visited)
+print("Cost: ", cost)                               #   if UCS or A_Star has been used
 ```
 ## 📁 Project Structure
 ```
-pathfinder/
-├── algorithms/
-│   ├── bfs.py
-│   ├── dfs.py
-│   ├── ucs.py
+./
+├── PathWise/
 │   ├── __init__.py
-    └── astar.py
+│   ├── A_Star.py
+│   ├── BFS.py
+│   ├── DFS.py
+│   ├── Helper.py
+│   └── UCS.py
+├── .gitignore
+├── LICENSE
+├── README.md
+└── setup.py
+
 ```
 ## 📃 License
 
