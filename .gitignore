@@ -1,0 +1,9 @@
+venv/
+PathWise/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.env
+__pycache__/
