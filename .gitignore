@@ -7,4 +7,3 @@ PathWise/__pycache__/
 *.egg-info/
 *.env
 __pycache__/
-dist/
