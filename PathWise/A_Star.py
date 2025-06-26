@@ -1,7 +1,7 @@
 import heapq
 from Helper import *
 
-def UCS(Maze, start, end, costPerStep = 1):
+def A_Star(Maze, start, end, costPerStep = 1):
     queue = [(0, 0, start, [start])]
     visited = set()
     nodesExpanded = 1
