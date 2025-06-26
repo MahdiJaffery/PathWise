@@ -1,6 +1,6 @@
 from .Helper import *
 
-def DFS(Maze, start, end):
+def DFS(Maze, start, end, diagonal = False):
     stack = [(start, [start])]
     visited = set()
     nodesExpanded = 1
@@ -15,7 +15,7 @@ def DFS(Maze, start, end):
             visited.add(current)
             nodesExpanded += 1
 
-            for neighbour in getNeighbours(current, Maze, diagonal = False):
+            for neighbour in getNeighbours(current, Maze, diagonal):
                 if neighbour not in visited:
                     stack.append((neighbour, path + [neighbour]))
     return None, nodesExpanded

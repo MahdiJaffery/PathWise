@@ -5,7 +5,7 @@ def getNeighbours(current, Maze, diagonal = False):
     cx, cy = current
     directions = [(0, 1), (1, 0), (0, -1), (-1, 0)] 
     
-    newMaze = np.array(Maze)
+    newMaze = np.array(Maze).astype(str)
 
     if diagonal:
         directions += [(1, 1), (1, -1), (-1, 1), (-1, -1)]

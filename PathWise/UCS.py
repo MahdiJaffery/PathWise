@@ -1,7 +1,7 @@
 import heapq
 from .Helper import *
 
-def UCS(Maze, start, end, costPerStep = 1):
+def UCS(Maze, start, end, costPerStep = 1, diagonal = False):
     queue = [(0, start, [start])]
     visited = set()
     nodesExpanded = 1
@@ -16,7 +16,7 @@ def UCS(Maze, start, end, costPerStep = 1):
             visited.add(current)
             nodesExpanded += 1
 
-            for neighbour in getNeighbours(current, Maze, diagonal=False):
+            for neighbour in getNeighbours(current, Maze, diagonal):
                 if neighbour not in visited:
                     new_cost = cost + costPerStep
                     heapq.heappush(queue, (new_cost, neighbour, path + [neighbour]))

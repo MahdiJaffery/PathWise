@@ -1,7 +1,7 @@
 from collections import deque
 from .Helper import *
 
-def BFS(Maze, start, end):
+def BFS(Maze, start, end, diagonal = False):
     queue = deque([(start, [start])])
     visited = set()
     nodesExpanded = 1
@@ -16,7 +16,7 @@ def BFS(Maze, start, end):
             visited.add(current)
             nodesExpanded += 1
 
-            for neighbour in getNeighbours(current, Maze, diagonal=False):
+            for neighbour in getNeighbours(current, Maze, diagonal):
                 if neighbour not in visited:
                     queue.append((neighbour, path + [neighbour]))
     
