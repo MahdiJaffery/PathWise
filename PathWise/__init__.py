@@ -20,3 +20,5 @@ class PathWise:
         return A_Star(Maze, start, end, costPerStep, diagonal)
     
     pass
+PathWise = PathWise
+__all__ = ['PathWise']
