@@ -1,5 +1,5 @@
 import heapq
-from Helper import *
+from .Helper import *
 
 def A_Star(Maze, start, end, costPerStep = 1):
     queue = [(0, 0, start, [start])]

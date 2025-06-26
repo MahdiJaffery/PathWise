@@ -1,5 +1,5 @@
 from collections import deque
-from Helper import *
+from .Helper import *
 
 def BFS(Maze, start, end):
     queue = deque([(start, [start])])

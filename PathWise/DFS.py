@@ -1,4 +1,4 @@
-from Helper import *
+from .Helper import *
 
 def DFS(Maze, start, end):
     stack = [(start, [start])]
