@@ -16,3 +16,6 @@ def getNeighbours(current, Maze, diagonal = False):
         if 0 <= x < len(newMaze) and 0 <= y < len(newMaze[0]) and newMaze[x][y] != '1':
             neighbours.append((x, y))
     return neighbours
+
+def getHeuristic(current, end):
+    return abs(current[0] - end[0]) + abs(current[1] - end[1])
