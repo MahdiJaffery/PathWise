@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="PathWise",
-    version="1.0.0",
+    version="1.0.1",
     author="Mahdi Jaffery",
     author_email="mahdijaffri5@gmail.com",
     description="A Python package implementing various search algorithms for maze solving",
