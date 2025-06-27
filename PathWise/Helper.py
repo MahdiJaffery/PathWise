@@ -13,7 +13,7 @@ def getNeighbours(current, Maze, diagonal = False):
     for dx, dy in directions:
         x, y = cx + dx, cy + dy
 
-        if 0 <= x < len(newMaze) and 0 <= y < len(newMaze[0]) and newMaze[x][y] != '1':
+        if 0 <= x < len(newMaze) and 0 <= y < len(newMaze[0]) and (newMaze[x][y] != '1' and newMaze[x][y] != 'X' and newMaze[x][y] != '#'):
             neighbours.append((x, y))
     return neighbours
 
